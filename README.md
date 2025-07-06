@@ -7,15 +7,37 @@ A modern Express.js server built with TypeScript, featuring development tools, c
 Before starting, make sure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v16 or higher)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Yarn](https://yarnpkg.com/) (v1.22 or higher)
 - [Git](https://git-scm.com/)
 
 ## 🚀 Quick Start
 
-### Step 1: Clone and Navigate to Project
+### Option A: Use as Starter Template
+
+If you want to use this as a starter template for your own project:
 
 ```bash
-# If cloning the entire repository
+# Clone the repository
+git clone <repository-url> my-new-project
+cd my-new-project/server
+
+# Remove the original git history and start fresh
+rm -rf .git
+git init
+git add .
+git commit -m "Initial commit: Express TypeScript starter"
+
+# Optional: Connect to your own remote repository
+git remote add origin <your-new-repository-url>
+git push -u origin main
+```
+
+### Option B: Work with Existing Project
+
+If you're working with the existing MERN crash course project:
+
+```bash
+# Clone the entire repository
 git clone <repository-url>
 cd mern-crash-course/server
 
@@ -23,14 +45,14 @@ cd mern-crash-course/server
 cd server
 ```
 
-### Step 2: Install Dependencies
+### Step 1: Install Dependencies
 
 ```bash
 # Install all dependencies (production + development)
-npm install
+yarn install
 ```
 
-### Step 3: Environment Configuration
+### Step 2: Environment Configuration
 
 ```bash
 # Create environment file
@@ -43,11 +65,11 @@ NODE_ENV=development
 # MONGODB_URI=mongodb://localhost:27017/your-database-name
 ```
 
-### Step 4: Development Server
+### Step 3: Development Server
 
 ```bash
 # Start development server with hot reload
-npm run dev
+yarn dev
 ```
 
 The server will start on `http://localhost:5000` and automatically restart when you make changes to TypeScript files.
@@ -70,22 +92,22 @@ server/
 
 ## 🛠️ Available Scripts
 
-| Script                 | Description                                    |
-| ---------------------- | ---------------------------------------------- |
-| `npm run dev`          | Start development server with hot reload       |
-| `npm run build`        | Compile TypeScript to JavaScript               |
-| `npm start`            | Start production server (requires build first) |
-| `npm run format`       | Format code with Prettier                      |
-| `npm run format:check` | Check code formatting                          |
-| `npm run lint:check`   | Check for linting errors                       |
-| `npm run lint:fix`     | Fix linting errors automatically               |
+| Script              | Description                                    |
+| ------------------- | ---------------------------------------------- |
+| `yarn dev`          | Start development server with hot reload       |
+| `yarn build`        | Compile TypeScript to JavaScript               |
+| `yarn start`        | Start production server (requires build first) |
+| `yarn format`       | Format code with Prettier                      |
+| `yarn format:check` | Check code formatting                          |
+| `yarn lint:check`   | Check for linting errors                       |
+| `yarn lint:fix`     | Fix linting errors automatically               |
 
 ## 🔧 Development Workflow
 
 ### Step 1: Start Development Server
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ### Step 2: Make Your Changes
@@ -98,16 +120,16 @@ npm run dev
 
 ```bash
 # Check code formatting
-npm run format:check
+yarn format:check
 
 # Format code automatically
-npm run format
+yarn format
 
 # Check for linting issues
-npm run lint:check
+yarn lint:check
 
 # Fix linting issues automatically
-npm run lint:fix
+yarn lint:fix
 ```
 
 ## 🏗️ Building for Production
@@ -115,13 +137,13 @@ npm run lint:fix
 ### Step 1: Build the Project
 
 ```bash
-npm run build
+yarn build
 ```
 
 ### Step 2: Start Production Server
 
 ```bash
-npm start
+yarn start
 ```
 
 ## 🗄️ Database Integration
@@ -166,15 +188,15 @@ netstat -ano | findstr :5000   # Windows
 npx tsc --noEmit
 
 # Ensure all dependencies are installed
-npm install
+yarn install
 ```
 
 **Module not found errors:**
 
 ```bash
 # Clear node_modules and reinstall
-rm -rf node_modules package-lock.json
-npm install
+rm -rf node_modules yarn.lock
+yarn install
 ```
 
 ## 📝 Next Steps
@@ -188,8 +210,8 @@ npm install
 ## 🤝 Contributing
 
 1. Follow the existing code style (ESLint + Prettier)
-2. Run `npm run lint:check` and `npm run format:check` before committing
-3. Ensure all TypeScript compilation passes with `npm run build`
+2. Run `yarn lint:check` and `yarn format:check` before committing
+3. Ensure all TypeScript compilation passes with `yarn build`
 
 ---
 
