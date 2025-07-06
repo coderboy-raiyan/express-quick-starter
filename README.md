@@ -1,6 +1,6 @@
 # Express.js TypeScript Server - Quick Start Guide
 
-A modern Express.js server built with TypeScript, featuring development tools, code formatting, and MongoDB integration.
+Don't want the hassle of setting up a new Express.js server with TypeScript? This guide will help you get started quickly, whether you're using this as a starter template or want to start without those troublesome setup of Eslint Formatting.
 
 ## 📋 Prerequisites
 
